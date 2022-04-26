@@ -1,0 +1,18 @@
+//Palindrome Checker practice program - JavaScript
+
+function palindrome(str) {
+//convert string to lowercase and remove unwanted characters
+const lowCase = str
+.toLowerCase()
+.replace(/[\W_]/g, "");
+
+//split string into characters, reverse them, rejoin them into a string
+const reverseLowCase = lowCase
+.split("")
+.reverse()
+.join("");
+console.log(reverseLowCase + " =? " + lowCase);
+
+//return boolean
+return lowCase === reverseLowCase;
+}
